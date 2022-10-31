@@ -79,7 +79,7 @@ import { DateTimePicker } from 'solid-date-time-picker'
 |calendarResponse|`(props: type)=>void`|||Callback to get the values|
 
 # Dependancies
-#### [SolidJs](https://www.solidjs.com/) ![logo](https://user-images.githubusercontent.com/94821587/198977749-b35956d0-f31f-4169-89fc-e0c55cfd7e32.svg)
+#### [SolidJs](https://www.solidjs.com/)
 #### [Type Script](https://www.typescriptlang.org/)
 #### [Moment](https://momentjs.com/)
 #### [Sass](https://sass-lang.com/)
