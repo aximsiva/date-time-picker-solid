@@ -32,45 +32,45 @@ function App() {
 # Properties
 | Props | Type | Default Value | Discription |
 |------ | ------| ------ | ------ |
-| currentDate | `Date / string` | | Mandatory Field, default date for the calendar.|
-|dateFormat|`string`| `DD MMM, YYYY` | Date Format that's been displayed. |
+| currentDate | `Date/string` | | Mandatory Field, default date for the calendar.|
+|dateFormat|`string`| `DD MMM, YYYY` | Displayed date format. |
 |enableDateRangeSelector|`boolean`| `False`| Enables date Range Selection. |
-|prevDate|`Date` |`moment().startOf('weeks')`| Starting Date of range selection.|
+|prevDate|`Date` |`moment().startOf('weeks')`| Start Date of range selection.|
 |minDate|`Date` |`undefined`| Start Date. |
 |maxDate|`Date` |`undefined`| End Date. |
-|customizeRangeSelectedDates|`string`|`' '`| customizing selected dates. |
+|customizeRangeSelectedDates|`string`|`''`| Add a class name to customize the selected date range. |
 | __HEADER__ |
-|headerMonthFormat|`string`|`MMM`| Header month view. |
+|headerMonthFormat|`string`|`MMM`| Desired month format displayed in the header. |
 |headerYearFormat|`string`|`YYYY`| Header year view. |
-|enableArrowNavigation|`boolean`|`True`| Enables/Disables the navigation of Default view. |
-|customizeLeftArrow|`string`|`' '`| customizing left arrow. |
-|customizeRightArrow|`string`|`' '`| customizing right arrow. |
-|customizeActiveMonth|`string`|`' '`| customizing calendar view. |
+|enableArrowNavigation|`boolean`|`True`| Enables/Disables the navigation. |
+|customizeLeftArrow|`string`|`''`| Add a class name to customize left arrow. |
+|customizeRightArrow|`string`|`''`| Add a class name to customize right arrow. |
+|customizeActiveMonth|`string`|`''`| Add a class name to customize calendar view. |
 |__SECTION 1__|
-|enableSelectedDate|`boolean`|`True`| Shows selected date.|
+|enableSelectedDate|`boolean`|`True`| Display selected date.|
 |enableSelectedDateEditor|`boolean`|`False`| Makes selected date editable. |
-|customizeSelectedDate|`string`|`' '`| customizing selected date view. |
+|customizeSelectedDate|`string`|`''`| Add a class name to customize selected date view. |
 |enableTodayNavigator|`boolean`|`False`| Enables today navigating button.|
-|customizeTodayNavigator|`string`|`' '`| customizing today button. |
-|__SECTION 2__|
+|customizeTodayNavigator|`string`|`''`| Add a class name to customize today button. |
+|__VIEW SECTION__|
 |enableCalendarViewType|`boolean`|`False`| Enables Calendar type switching button.|
-|activeCalendarView|`day / month / year` |`day`| Active view |
-|cutomizeCalendarViewButtons|`string`|`' '`| customizing preview type buttons. |
-|__CONTAINER__|
-|customizeListView|`string`|`' '`| customizing the list. |
-|customizeListHeader|`string`|`' '`| customizing the list header. |
-|customizeYearLeftNavigationArrow|`string`|`' '`| customizing the year view left arrow navigator. |
-|customizeYearRightNavigationArrow|`string`|`' '`| customizing the year view left arrow  navigator. |
+|activeCalendarView|`day/month/year` |`day`| Active view |
+|cutomizeCalendarViewButtons|`string`|`''`| Add a class name to customize view type buttons. |
+|__PICKER__|
+|customizeListView|`string`|`''`| Add a class name to customize the list. |
+|customizeListHeader|`string`|`''`| Add a class name to customize the list header. |
+|customizeYearLeftNavigationArrow|`string`|`''`| Add a class name to customize the year view left arrow navigator. |
+|customizeYearRightNavigationArrow|`string`|`''`| Add a class name to customize the year view right arrow  navigator. |
 |__TIME__|
 |enableTimeView|`boolean`|`False`| Enables Time view in calendar.|
 |ednableTimeEditing|`boolean`|`False`| Enables Time editing option in calendar.|
-|customizeTimeViewSwitch|`string`|`' '`| customizing the timeer view switch button. |
-|customizeTimeInputField|`string`|`' '`| customizing the time input field. |
-|customizeTimeUpdateButton|`string`|`' '`| customizing the time update button. |
-|customizeConsolidateTimeView|`string`|`' '`| customizing the time day and view element. |
-|customizeTimeDownArrow|`string`|`' '`| customizing the time increase buttons. |
-|customizeTimeUpArrow|`string`|`' '`| customizing the time decrease buttons. . |
-|renameTimeUpdateButton|`string`|`' '`| To rename the update button. |
+|customizeTimeViewSwitch|`string`|`''`| Add a class name to customize the time view toggle button. |
+|customizeTimeInputField|`string`|`''`| Add a class name to customize the time input field. |
+|customizeTimeUpdateButton|`string`|`''`| Add a class name to customize the time update button. |
+|customizeConsolidateTimeView|`string`|`''`| Add a class name to customize the time day and view element. |
+|customizeTimeDownArrow|`string`|`''`| Add a class name to customize the time increase buttons. |
+|customizeTimeUpArrow|`string`|`''`| Add a class name to customize the time decrease buttons. . |
+|renameTimeUpdateButton|`string`|`''`| To rename the update button. |
 |__OUTPUT__|
 |calendarResponse|`(props: type)=>void`|||Callback to get the values|
 
