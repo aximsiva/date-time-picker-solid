@@ -1,9 +1,10 @@
 # solid-date-time-picker
-A new Date and Time picker package for Solid JS.
+An intractive `Date and Time Picker` package for Solid JS.
 
 # Installaiton
 
 You can install solid-date-time-picker package via,
+
 using NPM
 ```sh
 npm install solid-date-time-picker
@@ -14,14 +15,12 @@ or using Yarn
 yarn add solid-date-time-picker
 ```
 
-## Useage
-import the package using this following line,
+## Usage
+Import the package using this following line,
 
 ```sh
 import { DateTimePicker } from 'solid-date-time-picker'
 ```
-
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
 
 # Preview
 ### Day Wise Preview
@@ -43,7 +42,7 @@ import { DateTimePicker } from 'solid-date-time-picker'
 |minDate|`Date`|new Date() |`undefined`| Start Date. |
 |maxDate|`Date`|new Date() |`undefined`| End Date. |
 |customizeRangeSelectedDates|`string`|CSS class name |`' '`| customizing selected dates. |
-| __HEADER SECTION__ |
+| __HEADER__ |
 |headerMonthFormat|`string`|MMM|`MMM`| Header month view. |
 |headerYearFormat|`string`|YYYY|`YYYY`| Header year view. |
 |enableArrowNavigation|`boolean`| True / False|`True`| Enables/Disables the navigation of Default view. |
