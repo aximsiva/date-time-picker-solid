@@ -1,5 +1,5 @@
 # solid-date-time-picker
-A new Date and Time picker for Solid JS.
+A new Date and Time picker package for Solid JS.
 
 # Installaiton
 
