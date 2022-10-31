@@ -3,22 +3,22 @@ A new Date and Time picker for Solid JS.
 
 # Installaiton
 
-You can install solid-calendar package via,
+You can install solid-date-time-picker package via,
 using NPM
 ```sh
-npm install calendar-solid
+npm install solid-date-time-picker
 ```
 or using Yarn
 
 ```sh
-yarn add calendar-solid
+yarn add solid-date-time-picker
 ```
 
 ## Useage
 import the package using this following line,
 
 ```sh
-import { SolidCalendar } from 'calendar-solid'
+import { DateTimePicker } from 'solid-date-time-picker'
 ```
 
 ### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
