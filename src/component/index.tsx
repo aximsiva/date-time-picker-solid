@@ -1,15 +1,15 @@
 import { createEffect, createMemo, createSignal } from "solid-js";
 import './assets/stylesheets/base.scss';
 import moment from 'moment';
+import { monthList, viewList, weekDays } from "./utils/constant";
+
+import caledarTimeIcon from './assets/icons/calender-time.svg';
 import rightArrowIcon from './assets/icons/right-arrow.svg';
 import leftArrowIcon from './assets/icons/left-arrow.svg';
-
 import roundedRightArrowIcon from './assets/icons/round-right-arrow.svg';
 import roundedleftArrowIcon from './assets/icons/round-left-arrow.svg';
 import timingLogo from './assets/icons/time.svg';
-
-import { monthList, viewList, weekDays } from "./utils/constant";
-import caledarTimeIcon from './assets/icons/calender-time.svg';
+import calendarViewIcon from './assets/icons/calendarView.svg'
 
 interface IPropsValue {
     activeView: string;
@@ -48,7 +48,7 @@ interface ICalendarComponentProps {
     customizeRightArrow?: string;
     customizeActiveMonth?: string;
     customizeTodayNavigator?: string;
-    activeCalendarView?: 'day'|'month'|'year';
+    activeCalendarView?: 'day' | 'month' | 'year';
     cutomizeCalendarViewButtons?: string;
     enableCalendarViewType?: boolean;
     customizeListView?: string;
@@ -330,7 +330,7 @@ export const DateTimePicker = (
                     }
                     {enableTimeView ? <img
                         class={`time-icon cur-pointer ${customizeTimeViewSwitch}`}
-                        src={timingLogo}
+                        src={isTimeViewEnabled() ? calendarViewIcon : timingLogo}
                         alt='Day Time Icon'
                         onClick={() => {
                             setTimeView(!isTimeViewEnabled());
@@ -498,7 +498,7 @@ export const DateTimePicker = (
                             <div class={`time-hours-picker`}>
                                 <img
                                     src={roundedleftArrowIcon}
-                                    class={`increment-icon icon_size cur-pointer box-shadow-card ${timeValue().hour==='00'?'pointer-none cust-dis':''} ${customizeTimeDownArrow}`}
+                                    class={`increment-icon icon_size cur-pointer box-shadow-card ${timeValue().hour === '00' ? 'pointer-none cust-dis' : ''} ${customizeTimeDownArrow}`}
                                     alt='hour-increment'
                                     onClick={() => {
                                         handleTimeChange(-1, 'hour', 23);
@@ -518,7 +518,7 @@ export const DateTimePicker = (
                                 />
                                 <img
                                     src={roundedleftArrowIcon}
-                                    class={`decrement-icon icon_size cur-pointer box-shadow-card ${timeValue().hour==='23'?'pointer-none cust-dis':''} ${customizeTimeUpArrow}`}
+                                    class={`decrement-icon icon_size cur-pointer box-shadow-card ${timeValue().hour === '23' ? 'pointer-none cust-dis' : ''} ${customizeTimeUpArrow}`}
                                     alt='hour-decrement'
                                     onClick={() => {
                                         handleTimeChange(1, 'hour', 23);
@@ -530,7 +530,7 @@ export const DateTimePicker = (
                             <div class={`time-mins-picker`}>
                                 <img
                                     src={roundedleftArrowIcon}
-                                    class={`increment-icon icon_size cur-pointer box-shadow-card ${timeValue().min==='00'?'pointer-none cust-dis':''} ${customizeTimeDownArrow}`}
+                                    class={`increment-icon icon_size cur-pointer box-shadow-card ${timeValue().min === '00' ? 'pointer-none cust-dis' : ''} ${customizeTimeDownArrow}`}
                                     alt='min-increment'
                                     onClick={() => {
                                         handleTimeChange(-1, 'min', 59);
@@ -550,7 +550,7 @@ export const DateTimePicker = (
                                 />
                                 <img
                                     src={roundedleftArrowIcon}
-                                    class={`decrement-icon icon_size cur-pointer box-shadow-card ${timeValue().min==='59'?'pointer-none cust-dis':''} ${customizeTimeUpArrow}`}
+                                    class={`decrement-icon icon_size cur-pointer box-shadow-card ${timeValue().min === '59' ? 'pointer-none cust-dis' : ''} ${customizeTimeUpArrow}`}
                                     alt='min-decrement'
                                     onClick={() => {
                                         handleTimeChange(1, 'min', 59);
