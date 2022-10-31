@@ -1,12 +1,20 @@
 {
-  "name": "vite-template-solid",
-  "version": "0.0.0",
-  "description": "",
+  "name": "solid-date-time-picker",
+  "version": "0.0.1Beta",
+  "description": "A new Date and Time package for SolidJs",
+  "author": "sivashankaran (aximsoft)",
+  "main": "dist/index.tsx",
+  "module": "dist/index.tsx",
   "scripts": {
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
+  },
+  "homepage": "https://solidjs.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aximsiva/solid-date-time-picker"
   },
   "license": "MIT",
   "devDependencies": {
@@ -15,6 +23,8 @@
     "vite-plugin-solid": "^2.3.0"
   },
   "dependencies": {
-    "solid-js": "^1.5.1"
+    "solid-js": "^1.5.1",
+    "moment": "^2.29.4",
+    "sass": "^1.55.0"
   }
 }
