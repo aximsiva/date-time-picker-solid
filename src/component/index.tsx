@@ -8,7 +8,7 @@ import roundedRightArrowIcon from './assets/icons/round-right-arrow.svg';
 import roundedleftArrowIcon from './assets/icons/round-left-arrow.svg';
 import timingLogo from './assets/icons/time.svg';
 
-import { monthList, viewList, weekDays } from "./utils/common";
+import { monthList, viewList, weekDays } from "./utils/constant";
 import caledarTimeIcon from './assets/icons/calender-time.svg';
 
 interface IPropsValue {
@@ -35,7 +35,7 @@ interface ICalendarComponentProps {
     prevDate?: Date;
     minDate?: Date;
     maxDate?: Date;
-    enableDatRangeSelector?: boolean;
+    enableDateRangeSelector?: boolean;
     currentDate: Date | string;
     headerMonthFormat?: string;
     headerYearFormat?: string
@@ -48,7 +48,7 @@ interface ICalendarComponentProps {
     customizeRightArrow?: string;
     customizeActiveMonth?: string;
     customizeTodayNavigator?: string;
-    activeCalendarView?: string;
+    activeCalendarView?: 'day'|'month'|'year';
     cutomizeCalendarViewButtons?: string;
     enableCalendarViewType?: boolean;
     customizeListView?: string;
@@ -67,10 +67,10 @@ interface ICalendarComponentProps {
     calendarResponse?: (props: IPropsValue) => void;
 }
 
-export const SolidCalendar = (
+export const DateTimePicker = (
     {
         currentDate,
-        enableDatRangeSelector = false,
+        enableDateRangeSelector = false,
         prevDate = moment().startOf('weeks').toDate(),
         minDate,
         maxDate,
@@ -299,7 +299,7 @@ export const SolidCalendar = (
             {/* Sub Header */}
             {enableTodayNavigator || enableSelectedDate ?
                 <div class='cal-sub-header'>
-                    {enableTodayNavigator && !enableDatRangeSelector ?
+                    {enableTodayNavigator && !enableDateRangeSelector ?
                         <button
                             class={`jump-today cur-pointer box-shadow-card ${customizeTodayNavigator}`}
                             onClick={() => {
@@ -445,7 +445,7 @@ export const SolidCalendar = (
                                 let isRangeActive = false; // highlights the dates in-between
                                 let isDatesDisabled = false; // disables the prev date during selection 
 
-                                if (enableDatRangeSelector) {
+                                if (enableDateRangeSelector) {
 
                                     if (dateRangeArr()[0] && !dateRangeArr()[1]) {
                                         isActive = moment(it).isSame(moment(previousDateState()).startOf('days'));
@@ -470,14 +470,14 @@ export const SolidCalendar = (
                                 return (
                                     <div
                                         class={`week-list-items cur-pointer 
-                                        ${isActive ? `${enableDatRangeSelector ? 'active-bg' : 'active '} box-shadow-card` : ''} 
+                                        ${isActive ? `${enableDateRangeSelector ? 'active-bg' : 'active '} box-shadow-card` : ''} 
                                         ${customizeListView}
                                         ${it < startDate || it > endDate ? 'cust-dis' : ''}
                                         ${isRangeActive ? `bg-hover-clr ${customizeRangeSelectedDates}` : ''}
                                         ${isDatesDisabled ? 'cust-dis pointer-none' : ''}
                                         `}
                                         onClick={() => {
-                                            if (enableDatRangeSelector) {
+                                            if (enableDateRangeSelector) {
                                                 handleMultiSelectDate(it);
                                             } else {
                                                 setLocDate(it);
@@ -498,7 +498,7 @@ export const SolidCalendar = (
                             <div class={`time-hours-picker`}>
                                 <img
                                     src={roundedleftArrowIcon}
-                                    class={`increment-icon icon_size cur-pointer box-shadow-card ${customizeTimeDownArrow}`}
+                                    class={`increment-icon icon_size cur-pointer box-shadow-card ${timeValue().hour==='00'?'pointer-none cust-dis':''} ${customizeTimeDownArrow}`}
                                     alt='hour-increment'
                                     onClick={() => {
                                         handleTimeChange(-1, 'hour', 23);
@@ -518,7 +518,7 @@ export const SolidCalendar = (
                                 />
                                 <img
                                     src={roundedleftArrowIcon}
-                                    class={`decrement-icon icon_size cur-pointer box-shadow-card ${customizeTimeUpArrow}`}
+                                    class={`decrement-icon icon_size cur-pointer box-shadow-card ${timeValue().hour==='23'?'pointer-none cust-dis':''} ${customizeTimeUpArrow}`}
                                     alt='hour-decrement'
                                     onClick={() => {
                                         handleTimeChange(1, 'hour', 23);
@@ -530,7 +530,7 @@ export const SolidCalendar = (
                             <div class={`time-mins-picker`}>
                                 <img
                                     src={roundedleftArrowIcon}
-                                    class={`increment-icon icon_size cur-pointer box-shadow-card ${customizeTimeDownArrow}`}
+                                    class={`increment-icon icon_size cur-pointer box-shadow-card ${timeValue().min==='00'?'pointer-none cust-dis':''} ${customizeTimeDownArrow}`}
                                     alt='min-increment'
                                     onClick={() => {
                                         handleTimeChange(-1, 'min', 59);
@@ -550,7 +550,7 @@ export const SolidCalendar = (
                                 />
                                 <img
                                     src={roundedleftArrowIcon}
-                                    class={`decrement-icon icon_size cur-pointer box-shadow-card ${customizeTimeUpArrow}`}
+                                    class={`decrement-icon icon_size cur-pointer box-shadow-card ${timeValue().min==='59'?'pointer-none cust-dis':''} ${customizeTimeUpArrow}`}
                                     alt='min-decrement'
                                     onClick={() => {
                                         handleTimeChange(1, 'min', 59);

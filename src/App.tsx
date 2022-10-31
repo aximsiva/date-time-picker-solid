@@ -1,12 +1,12 @@
 import moment from 'moment';
 import type { Component } from 'solid-js';
 
-import { SolidCalendar } from './component';
+import { DateTimePicker } from './component';
 
 const App: Component = () => {
   return (
     <div class='parent'>
-      <SolidCalendar
+      <DateTimePicker
         currentDate={moment().toDate()}
         enableTodayNavigator
         enableCalendarViewType
