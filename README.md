@@ -1,87 +1,84 @@
 # solid-date-time-picker
-An intractive `Date and Time Picker` package for Solid JS.
+An interactive `Date and Time Picker` for SolidJS.
 
-# Installaiton
+# Installation
 
-You can install solid-date-time-picker package via,
-
-using NPM
+__npm:__
 ```sh
 npm install solid-date-time-picker
 ```
-or using Yarn
+__yarn:__
 
 ```sh
 yarn add solid-date-time-picker
 ```
 
-## Usage
-Import the package using this following line,
+## Example
+Here is an example of a basic app using DateTimePicker component:
 
 ```sh
 import { DateTimePicker } from 'solid-date-time-picker'
+
+function App() {
+  return <DateTimePicker currentDate={moment().toDate()} />;
+}
 ```
 
 # Preview
-### Day Wise Preview
-![dayWise](https://user-images.githubusercontent.com/72572188/198945647-cd36a4c2-a2b6-49af-9ab7-a18d0e3e17e8.png)
-### Month Wise Preview
-![monthWisse](https://user-images.githubusercontent.com/72572188/198945731-58370c9a-0c12-463f-a0ce-486ac5b7830f.png)
-### Year Wise Preview
-![yearWise](https://user-images.githubusercontent.com/72572188/198945775-bd388394-ae70-426a-9a50-d2a103a29d1b.png)
-### Time Preview
-![Screenshot from 2022-10-31 11-57-07](https://user-images.githubusercontent.com/72572188/198945780-d08bdf10-3a62-49f6-9b4f-496634832dd7.png)
+![Frame 1 (1)](https://user-images.githubusercontent.com/94821587/199010399-3145721f-9633-4bdb-89ee-932f868cf864.png)
+
+![Frame 2](https://user-images.githubusercontent.com/94821587/199007649-77ded059-e908-4856-96a6-1d3bbc49e830.png)
 
 # Properties
-| Props | Value Type| Example | Default Value | Discription |
-|------ | ------| ------| -------  | ------ |
-| currentDate | `Date / string` | new Date() / '01.01.2022'| | It is a only Mandatory Field, default date for the calendar.|
-|dateFormat|`string`| YYYY| `DD MMM, YYYY` | Date Format that's been displayed. |
-|enableDatRangeSelector|`boolean`|True / False| `False`| Enables date Range Selection. |
-|prevDate|`Date`|new Date() |`moment().startOf('weeks')`| Starting Date of range selection.|
-|minDate|`Date`|new Date() |`undefined`| Start Date. |
-|maxDate|`Date`|new Date() |`undefined`| End Date. |
-|customizeRangeSelectedDates|`string`|CSS class name |`' '`| customizing selected dates. |
+| Props | Type | Default Value | Discription |
+|------ | ------| ------ | ------ |
+| currentDate | `Date/string` | | Mandatory Field, default date for the calendar.|
+|dateFormat|`string`| `DD MMM, YYYY` | Displayed date format. |
+|enableDateRangeSelector|`boolean`| `False`| Enables date Range Selection. |
+|prevDate|`Date` |`moment().startOf('weeks')`| Start Date of range selection.|
+|minDate|`Date` |`undefined`| Start Date. |
+|maxDate|`Date` |`undefined`| End Date. |
+|customizeRangeSelectedDates|`string`|`''`| Add a class name to customize the selected date range. |
 | __HEADER__ |
-|headerMonthFormat|`string`|MMM|`MMM`| Header month view. |
-|headerYearFormat|`string`|YYYY|`YYYY`| Header year view. |
-|enableArrowNavigation|`boolean`| True / False|`True`| Enables/Disables the navigation of Default view. |
-|customizeLeftArrow|`string`|CSS class name |`' '`| customizing left arrow. |
-|customizeRightArrow|`string`|CSS class name |`' '`| customizing right arrow. |
-|customizeActiveMonth|`string`|CSS class name |`' '`| customizing calendar view. |
+|headerMonthFormat|`string`|`MMM`| Desired month format displayed in the header. |
+|headerYearFormat|`string`|`YYYY`| Header year view. |
+|enableArrowNavigation|`boolean`|`True`| Enables/Disables the navigation. |
+|customizeLeftArrow|`string`|`''`| Add a class name to customize left arrow. |
+|customizeRightArrow|`string`|`''`| Add a class name to customize right arrow. |
+|customizeActiveMonth|`string`|`''`| Add a class name to customize calendar view. |
 |__SECTION 1__|
-|enableSelectedDate|`boolean`| True / False|`True`| Shows selected date.|
-|enableSelectedDateEditor|`boolean`| True / False|`False`| Makes selected date editable. |
-|customizeSelectedDate|`string`|CSS class name |`' '`| customizing selected date view. |
-|enableTodayNavigator|`boolean`| True / False|`False`| Enables today navigating button.|
-|customizeTodayNavigator|`string`|CSS class name |`' '`| customizing today button. |
-|__SECTION 2__|
-|enableCalendarViewType|`boolean`| True / False|`False`| Enables Calendar type switching button.|
-|activeCalendarView|`string`| day / month / year |`day`| Active view |
-|cutomizeCalendarViewButtons|`string`|CSS class name |`' '`| customizing preview type buttons. |
-|__CONTAINER__|
-|customizeListView|`string`|CSS class name |`' '`| customizing the list. |
-|customizeListHeader|`string`|CSS class name |`' '`| customizing the list header. |
-|customizeYearLeftNavigationArrow|`string`|CSS class name |`' '`| customizing the year view left arrow navigator. |
-|customizeYearRightNavigationArrow|`string`|CSS class name |`' '`| customizing the year view left arrow  navigator. |
+|enableSelectedDate|`boolean`|`True`| Display selected date.|
+|enableSelectedDateEditor|`boolean`|`False`| Makes selected date editable. |
+|customizeSelectedDate|`string`|`''`| Add a class name to customize selected date view. |
+|enableTodayNavigator|`boolean`|`False`| Enables today navigating button.|
+|customizeTodayNavigator|`string`|`''`| Add a class name to customize today button. |
+|__VIEW SECTION__|
+|enableCalendarViewType|`boolean`|`False`| Enables Calendar type switching button.|
+|activeCalendarView|`day/month/year` |`day`| Active view |
+|cutomizeCalendarViewButtons|`string`|`''`| Add a class name to customize view type buttons. |
+|__PICKER__|
+|customizeListView|`string`|`''`| Add a class name to customize the list. |
+|customizeListHeader|`string`|`''`| Add a class name to customize the list header. |
+|customizeYearLeftNavigationArrow|`string`|`''`| Add a class name to customize the year view left arrow navigator. |
+|customizeYearRightNavigationArrow|`string`|`''`| Add a class name to customize the year view right arrow  navigator. |
 |__TIME__|
-|enableTimeView|`boolean`| True / False|`False`| Enables Time view in calendar.|
-|ednableTimeEditing|`boolean`| True / False|`False`| Enables Time editing option in calendar.|
-|customizeTimeViewSwitch|`string`|CSS class name |`' '`| customizing the timeer view switch button. |
-|customizeTimeInputField|`string`|CSS class name |`' '`| customizing the time input field. |
-|customizeTimeUpdateButton|`string`|CSS class name |`' '`| customizing the time update button. |
-|customizeConsolidateTimeView|`string`|CSS class name |`' '`| customizing the time day and view element. |
-|customizeTimeDownArrow|`string`|CSS class name |`' '`| customizing the time increase buttons. |
-|customizeTimeUpArrow|`string`|CSS class name |`' '`| customizing the time decrease buttons. . |
-|renameTimeUpdateButton|`string`|value |`' '`| For rename the update button. |
+|enableTimeView|`boolean`|`False`| Enables Time view in calendar.|
+|ednableTimeEditing|`boolean`|`False`| Enables Time editing option in calendar.|
+|customizeTimeViewSwitch|`string`|`''`| Add a class name to customize the time view toggle button. |
+|customizeTimeInputField|`string`|`''`| Add a class name to customize the time input field. |
+|customizeTimeUpdateButton|`string`|`''`| Add a class name to customize the time update button. |
+|customizeConsolidateTimeView|`string`|`''`| Add a class name to customize the time day and view element. |
+|customizeTimeDownArrow|`string`|`''`| Add a class name to customize the time increase buttons. |
+|customizeTimeUpArrow|`string`|`''`| Add a class name to customize the time decrease buttons. . |
+|renameTimeUpdateButton|`string`|`''`| To rename the update button. |
 |__OUTPUT__|
 |calendarResponse|`(props: type)=>void`|||Callback to get the values|
 
-# Dependancies
-#### [SolidJs](https://www.solidjs.com/)
-#### [Type Script](https://www.typescriptlang.org/)
-#### [Moment](https://momentjs.com/)
-#### [Sass](https://sass-lang.com/)
+# Dependencies
+[<img src="https://user-images.githubusercontent.com/94821587/199000964-80e84838-7f3f-49f9-9a91-6bcf32f9c87f.svg" alt="typescript" width="40" height="40" />](https://www.solidjs.com/)
+[<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/>](https://www.typescriptlang.org/)
+[<img src="https://user-images.githubusercontent.com/94821587/199001054-6d046033-4914-4b52-9fde-081e749618d4.svg" alt="typescript" width="40" height="40"/>](https://momentjs.com/)
+[<img src="https://user-images.githubusercontent.com/94821587/199011459-d948644b-d0c5-4a14-8809-96bf5508edc9.png" alt="typescript" width="40" height="40"/>](https://www.w3.org/Style/CSS/Overview.en.html)
 
 # License
 `MIT`
