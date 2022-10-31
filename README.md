@@ -39,7 +39,7 @@ function App() {
 |minDate|`Date` |`undefined`| Start Date. |
 |maxDate|`Date` |`undefined`| End Date. |
 |customizeRangeSelectedDates|`string`|`''`| Add a class name to customize the selected date range. |
-| __HEADER__ |
+| __HEADER SECTION__ |
 |headerMonthFormat|`string`|`MMM`| Desired month format displayed in the header. |
 |headerYearFormat|`string`|`YYYY`| Header year view. |
 |enableArrowNavigation|`boolean`|`True`| Enables/Disables the navigation. |
@@ -56,12 +56,12 @@ function App() {
 |enableCalendarViewType|`boolean`|`False`| Enables Calendar type switching button.|
 |activeCalendarView|`day/month/year` |`day`| Active view |
 |cutomizeCalendarViewButtons|`string`|`''`| Add a class name to customize view type buttons. |
-|__PICKER__|
+|__PICKER SECTION__|
 |customizeListView|`string`|`''`| Add a class name to customize the list. |
 |customizeListHeader|`string`|`''`| Add a class name to customize the list header. |
 |customizeYearLeftNavigationArrow|`string`|`''`| Add a class name to customize the year view left arrow navigator. |
 |customizeYearRightNavigationArrow|`string`|`''`| Add a class name to customize the year view right arrow  navigator. |
-|__TIME__|
+|__TIME VIEW SECTION__|
 |enableTimeView|`boolean`|`False`| Enables Time view in calendar.|
 |ednableTimeEditing|`boolean`|`False`| Enables Time editing option in calendar.|
 |customizeTimeViewSwitch|`string`|`''`| Add a class name to customize the time view toggle button. |
