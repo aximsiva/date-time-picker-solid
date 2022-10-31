@@ -80,9 +80,9 @@ import { DateTimePicker } from 'solid-date-time-picker'
 
 # Dependancies
 #### [SolidJs](https://www.solidjs.com/)
-#### [Type Script](https://www.typescriptlang.org/) ![typescript-original](https://user-images.githubusercontent.com/94821587/198988301-5acb3758-bdfe-4764-8582-4b70e427dc6e.svg |width=40|height=40)
+#### [Type Script](https://www.typescriptlang.org/) ![typescript-original](https://user-images.githubusercontent.com/94821587/198988301-5acb3758-bdfe-4764-8582-4b70e427dc6e.svg | width=40)
 #### [Moment](https://momentjs.com/)
-#### [Sass](https://sass-lang.com/) ![sass-original](https://user-images.githubusercontent.com/94821587/198988287-1b4f4312-7959-46e5-bef3-9ed5b5eec194.svg|width=40|height=40) 
+#### [Sass](https://sass-lang.com/) ![sass-original](https://user-images.githubusercontent.com/94821587/198988287-1b4f4312-7959-46e5-bef3-9ed5b5eec194.svg | width=40) 
 
 
 # License
