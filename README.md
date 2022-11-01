@@ -1,4 +1,5 @@
-# solid-date-time-picker
+![logo (2)](https://user-images.githubusercontent.com/94821587/199168159-e5b0fbe1-5834-4cfa-9806-09d49f36e9a8.svg)
+
 An interactive `Date and Time Picker` for SolidJS.
 
 # Installation
