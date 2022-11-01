@@ -1,6 +1,6 @@
 {
   "name": "solid-date-time-picker",
-  "version": "0.0.1Beta",
+  "version": "1.0.0Beta",
   "description": "An interactive Date and Time picker for SolidJs. ",
   "author": "Aximsoft India Pvt Ltd",
   "main": "dist/index.tsx",
