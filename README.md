@@ -26,9 +26,8 @@ function App() {
 ```
 
 # Preview
-![Frame 1 (1)](https://user-images.githubusercontent.com/94821587/199010399-3145721f-9633-4bdb-89ee-932f868cf864.png)
+![Group 25 (2)](https://user-images.githubusercontent.com/94821587/199169900-2290653b-bf3c-4662-ad16-d64fd9e147df.png)
 
-![Frame 2](https://user-images.githubusercontent.com/94821587/199007649-77ded059-e908-4856-96a6-1d3bbc49e830.png)
 
 # Properties
 | Props | Type | Default Value | Discription |
