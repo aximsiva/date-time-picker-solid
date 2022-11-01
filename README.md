@@ -1,6 +1,6 @@
 ![logo (2)](https://user-images.githubusercontent.com/94821587/199168159-e5b0fbe1-5834-4cfa-9806-09d49f36e9a8.svg)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
+[![License: Aximsoft(MIT)](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT)  
 
 
 An interactive `Date and Time Picker` for SolidJS.

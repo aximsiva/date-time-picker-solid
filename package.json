@@ -5,7 +5,18 @@
   "author": "Aximsoft India Pvt Ltd",
   "main": "dist/index.tsx",
   "module": "dist/index.tsx",
-  "keywords": ["Aximsoft","SolidJs","Date time picker","date-picker", "date-time-picker","solid-datepicker","solidjs-datepicker","datetime-picker","solid-datetimepicker","solidjs-datetimepicker"] ,
+  "keywords": [
+    "Aximsoft",
+    "SolidJs",
+    "Date time picker",
+    "date-picker",
+    "date-time-picker",
+    "solid-datepicker",
+    "solidjs-datepicker",
+    "datetime-picker",
+    "solid-datetimepicker",
+    "solidjs-datetimepicker"
+  ],
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -17,7 +28,7 @@
     "type": "git",
     "url": "https://github.com/aximsiva/solid-date-time-picker"
   },
-  "license": "MIT",
+  "license": "Aximsoft(MIT)",
   "devDependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.19.6",
