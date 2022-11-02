@@ -1,7 +1,7 @@
 {
-  "name": "solid-date-time-picker",
-  "version": "1.0.1",
-  "description": "An interactive Date and Time picker for SolidJs. ",
+  "name": "date-time-picker-solid",
+  "version": "1.0.2",
+  "description": "An interactive Date and Time picker using SolidJS. ",
   "author": "Aximsoft India Pvt Ltd",
   "main": "dist/index.tsx",
   "module": "dist/index.tsx",
@@ -26,7 +26,7 @@
   "homepage": "https://solidjs.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aximsiva/solid-date-time-picker"
+    "url": "https://github.com/aximsoftDevTeam/date-time-picker-solid"
   },
   "license": "MIT",
   "devDependencies": {

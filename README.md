@@ -1,27 +1,28 @@
-![logo (2)](https://user-images.githubusercontent.com/94821587/199168159-e5b0fbe1-5834-4cfa-9806-09d49f36e9a8.svg)
+![dtps-logo 1 (1)](https://user-images.githubusercontent.com/117165113/199227886-15adf39f-829f-4268-afcf-36315cb1bee6.svg)
+
 
 [![License: Aximsoft(MIT)](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT)  
 
 
-An interactive `Date and Time Picker` for SolidJS.
+An interactive `Date and Time Picker` using SolidJS.
 
 # Installation
 
 __npm:__
-```sh
-npm install solid-date-time-picker
+```sh![dtps-logo 1](https://user-images.githubusercontent.com/117165113/199227572-f05f9b19-5d69-4414-8827-f22bcb5ab425.svg)
+npm install date-time-picker-solid
 ```
 __yarn:__
 
 ```sh
-yarn add solid-date-time-picker
+yarn add date-time-picker-solid
 ```
 
 ## Example
 Here is an example of a basic app using DateTimePicker component:
 
 ```sh
-import { DateTimePicker } from 'solid-date-time-picker'
+import { DateTimePicker } from 'date-time-picker-solid'
 
 function App() {
   return <DateTimePicker currentDate={moment().toDate()} />;
